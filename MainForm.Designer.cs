@@ -90,6 +90,7 @@
             this.placeholderLabel.Size = new System.Drawing.Size(109, 21);
             this.placeholderLabel.TabIndex = 7;
             this.placeholderLabel.Text = "Type to search";
+            this.placeholderLabel.Click += new System.EventHandler(this.placeholderLabel_Click);
             // 
             // MainForm
             // 

@@ -21,4 +21,9 @@ public class HistoryManager
 
         //Console.WriteLine(maxEntries);
     }
+
+    public void Remove(string text)
+    {
+        Entries.Remove(text);
+    }
 }

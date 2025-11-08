@@ -287,6 +287,20 @@ namespace RecallCopy
                 Hide();
                 e.SuppressKeyPress = true;
             }
+            else if (e.KeyCode == Keys.Delete)
+            {
+                // GO BACK HERE
+                if (historyList.SelectedItem != null)
+                {
+                    history.Remove(historyList.SelectedItem.ToString());
+                    int newIndex = historyList.SelectedIndex--;
+                    if (historyList.SelectedIndex > 0)
+                        historyList.SelectedIndex = newIndex;
+                    UpdateList();
+                }
+                e.SuppressKeyPress = true;
+                e.Handled = true;
+            }
             else if (e.KeyCode == Keys.Escape)
             {
                 Hide();
@@ -325,6 +339,14 @@ namespace RecallCopy
         {
             searchBox.Text += e.KeyChar;
             searchBox.Focus();
+        }
+
+        private void placeholderLabel_Click(object sender, EventArgs e)
+        {
+            if (placeholderLabel.Visible)
+            {
+                searchBox.Focus();
+            }
         }
     }
 }

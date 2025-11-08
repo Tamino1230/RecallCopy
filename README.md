@@ -7,6 +7,7 @@ A simple C# WinForms app that displays a searchable history list with advanced s
 - Open App: ALT + Q
 - Minimise App: ESC / Alt + Q
 - Fully Exit: CTRL + Enter
+- Remove Item: Delete Button
 
 ![preview](./assets/preview.png)
 
